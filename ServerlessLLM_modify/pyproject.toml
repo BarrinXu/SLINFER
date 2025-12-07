@@ -1,0 +1,49 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+    "cmake>=3.20",
+    "ninja",
+    "grpcio==1.49.1",
+    "grpcio-tools==1.49.1",
+]
+build-backend = "setuptools.build_meta"
+
+
+[tool.ruff]
+line-length = 80
+exclude = []
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+unfixable = [
+    # star imports
+    "F405",
+    "F403",
+    # lambda expression assignment
+    "E731",
+    # Loop control variable not used within loop body
+    "B007",
+    # raise distinguish errors
+    "B904",
+    # f-string format
+    "UP032",
+]
+select = [
+    # isort
+    "I",
+]
+ignore = [
+    # Loop control variable not used within loop body
+    "B007"
+]
+
+
+[tool.isort]
+use_parentheses = true
+skip_gitignore = true
+
+[tool.codespell]
+skip = 'build,*.egg-info,images'
+quiet-level = 1
+

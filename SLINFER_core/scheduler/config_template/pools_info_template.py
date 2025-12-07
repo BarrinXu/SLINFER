@@ -1,0 +1,1 @@
+pools_info_template = {}
