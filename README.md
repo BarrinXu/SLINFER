@@ -27,7 +27,7 @@ On **every machine** (1 GPU + 4 CPU machines):
       conda create -n SLINFER-GPU python=3.11
       conda activate SLINFER-GPU
       ```
-   * On GPU machines:
+   * On CPU machines:
       ```bash
       conda create -n SLINFER-CPU python=3.11
       conda activate SLINFER-CPU
